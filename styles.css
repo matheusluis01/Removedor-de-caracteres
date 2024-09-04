@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e0f7fa; /* Fundo azul claro */
+    padding: 50px;
+    position: relative;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+.input-container {
+    position: relative;
+    width: 626px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.input-container::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-image: url('menino.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5;
+    margin-left: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.input-container input:not(:placeholder-shown) + .input-container::before {
+    opacity: 0;
+}
+
+button.colar {
+    position: absolute;
+    right: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button.colar:hover {
+    background-color: #0277bd;
+}
+
+.buttons, .resultado-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #0288d1;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+button.limpar, button.limpar-historico {
+    background-color: #80d8ff; /* Tom mais claro de azul para os botões "Limpar" */
+}
+
+button:hover {
+    background-color: #0277bd;
+}
+
+.resultado-container {
+    margin-top: 20px;
+    width: 626px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.resultados-anteriores {
+    margin-top: 20px;
+    width: 626px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 10px;
+    background-color: #ffffff;
+    font-size: 16px;
+    font-style: italic;
+    border: none;
+    max-height: 150px; /* Limita a altura para tornar a área flexível */
+    overflow-y: auto;
+}
